@@ -1,0 +1,5 @@
+[program:hizumi_4_back]
+numprocs=1
+redirect_stderr=true
+stdout_logfile=/var/log/hizumi_4.log
+user=root

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang = “ja”>
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <title>システム WiFi設定</title>
+ <link rel="stylesheet" href="index.css">
+ <script src="jquery-3.1.0.min.js"></script>
+ <script src="index.js"/></script>
+</head>
+<body>
+  <header>
+    <h1>システム WiFi設定</h2>
+  </header>
+  <section>
+  <section class="exp">無線ルーターのSSID・パスワードを入力し、接続ボタンをクリックしてください。</section>
+  <h1>SSID</h1>
+  <article>
+    <label><input type="text" name="input1" id="ssid" class="txt" value=""></label><div id="wifi_dropdown">▼</div>
+  </section>
+  <section>
+  <h1>パスワード</h1>
+  <article>
+    <label><input type="text" name="input2" id="pass" class="txt" value=""></label>
+  </article>
+  </section>
+  <footer>
+    <div id="update" class="btn">接続</div>
+  </footer>
+  <section id="msg_section"><div id="msg"></div></section>
+  <div id="wifi_list"></div>
+</body>
+</html>

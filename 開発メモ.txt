@@ -1,0 +1,23 @@
+消雪センサーの開発メモ
+
+（１）Rpiに3Gモデム（AK-020）とUSB-RS232Cコンバータを挿した状態で3Gモデムが使えなかった。
+・AK-020を挿すと/dev/ttyAK020が出来るはずだが、それができない。
+・先にUSB-RS232Cコンバータのモジュールがロードされてしまうのが原因のようだ。
+・以下のコマンドを実行すると使えるようになった。
+/sbin/rmmod pl2303
+/sbin/rmmod usbserial
+/sbin/modprobe usbserial vendor=0x15eb product=0x7d0e
+/sbin/modprobe usbserial vendor=0x0557 product=0x2008
+/sbin/modprobe pl2303
+sleep 10s;pon soracom_ak-020
+
+これをrc.localに記述して実行するようにした。
+
+（２）サーバAPIのテスト
+・Windows10デスクトップにexpressでサーバを作成した。(test-server)
+・http://192.168.100.12:3000/sensor_post
+
+（３）プログラムのアップデート
+・自動的に更新プログラムをダウンロードして再起動するようにする。
+・program_updator.pyを起動しておく
+・決まったインターバル(10min)でサーバからダウンロードして更新されている時は、ファイルをコピーして再起動する。

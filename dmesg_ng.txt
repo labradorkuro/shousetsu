@@ -1,0 +1,61 @@
+[    0.169718] usbcore: registered new interface driver usbfs
+[    0.169852] usbcore: registered new interface driver hub
+[    0.170035] usbcore: registered new device driver usb
+[    1.363998] usbcore: registered new interface driver smsc95xx
+[    1.822903] dwc_otg 3f980000.usb: DWC OTG Controller
+[    1.826265] dwc_otg 3f980000.usb: new USB bus registered, assigned bus number 1
+[    1.829613] dwc_otg 3f980000.usb: irq 62, io mem 0x00000000
+[    1.839762] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.843072] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.846379] usb usb1: Product: DWC OTG Controller
+[    1.849628] usb usb1: Manufacturer: Linux 4.4.11-v7+ dwc_otg_hcd
+[    1.852911] usb usb1: SerialNumber: 3f980000.usb
+[    1.865091] usbcore: registered new interface driver usb-storage
+[    1.978650] usbcore: registered new interface driver usbhid
+[    1.981973] usbhid: USB HID core driver
+[    2.243501] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    2.443888] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+[    2.447345] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.733470] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    2.834008] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    2.837660] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.908031] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-3f980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:09:9b:6a
+[    2.993494] usb 1-1.2: new full-speed USB device number 4 using dwc_otg
+[    3.095823] usb 1-1.2: New USB device found, idVendor=0557, idProduct=2008
+[    3.099711] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.103606] usb 1-1.2: Product: USB-Serial Controller D
+[    3.107429] usb 1-1.2: Manufacturer: Prolific Technology Inc. 
+[    3.403471] usb 1-1.4: new low-speed USB device number 5 using dwc_otg
+[    3.545112] usb 1-1.4: New USB device found, idVendor=056e, idProduct=0018
+[    3.549222] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.553189] usb 1-1.4: Product: ELECOM USB mouse with wheel 
+[    3.557126] usb 1-1.4: Manufacturer: ELECOM
+[    3.604370] input: ELECOM ELECOM USB mouse with wheel  as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.4/1-1.4:1.0/0003:056E:0018.0001/input/input0
+[    3.605201] hid-generic 0003:056E:0018.0001: input,hidraw0: USB HID v1.10 Mouse [ELECOM ELECOM USB mouse with wheel ] on usb-3f980000.usb-1.4/input0
+[    6.407153] usbcore: registered new interface driver usbserial
+[    6.407322] usbcore: registered new interface driver usbserial_generic
+[    6.407436] usbserial: USB Serial support registered for generic
+[    6.413845] usbcore: registered new interface driver pl2303
+[    6.413984] usbserial: USB Serial support registered for pl2303
+[    6.422574] usb 1-1.2: pl2303 converter now attached to ttyUSB0
+[   10.313493] usb 1-1.3: new high-speed USB device number 6 using dwc_otg
+[   10.414850] usb 1-1.3: New USB device found, idVendor=15eb, idProduct=a403
+[   10.414875] usb 1-1.3: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[   10.414886] usb 1-1.3: Product: AK-020 
+[   10.414897] usb 1-1.3: Manufacturer: AK-020 
+[   10.414907] usb 1-1.3: SerialNumber: 536957700094020
+[   10.416619] usb-storage 1-1.3:1.0: USB Mass Storage device detected
+[   10.417421] scsi host0: usb-storage 1-1.3:1.0
+[   10.592218] usb 1-1.3: USB disconnect, device number 6
+[   11.343645] usb 1-1.3: new high-speed USB device number 7 using dwc_otg
+[   11.444491] usb 1-1.3: New USB device found, idVendor=15eb, idProduct=7d0e
+[   11.444517] usb 1-1.3: New USB device strings: Mfr=9, Product=10, SerialNumber=0
+[   11.444528] usb 1-1.3: Product: AK-020 
+[   11.444540] usb 1-1.3: Manufacturer: AK-020 
+[   11.449135] usb-storage 1-1.3:1.6: USB Mass Storage device detected
+[   11.449534] scsi host1: usb-storage 1-1.3:1.6
+[   11.538682] usbcore: registered new interface driver cdc_ncm
+[   11.544998] usbcore: registered new interface driver cdc_wdm
+[   11.553188] cdc_mbim 1-1.3:1.0 wwan0: register 'cdc_mbim' at usb-3f980000.usb-1.3, CDC MBIM, ae:33:24:27:78:8c
+[   11.554056] usbcore: registered new interface driver cdc_mbim
+[  672.696535] usb 1-1.2: USB disconnect, device number 4

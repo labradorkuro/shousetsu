@@ -1,0 +1,72 @@
+[    0.169876] usbcore: registered new interface driver usbfs
+[    0.170011] usbcore: registered new interface driver hub
+[    0.170190] usbcore: registered new device driver usb
+[    1.364296] usbcore: registered new interface driver smsc95xx
+[    1.823294] dwc_otg 3f980000.usb: DWC OTG Controller
+[    1.826651] dwc_otg 3f980000.usb: new USB bus registered, assigned bus number 1
+[    1.829993] dwc_otg 3f980000.usb: irq 62, io mem 0x00000000
+[    1.840121] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.843428] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.846721] usb usb1: Product: DWC OTG Controller
+[    1.849966] usb usb1: Manufacturer: Linux 4.4.11-v7+ dwc_otg_hcd
+[    1.853245] usb usb1: SerialNumber: 3f980000.usb
+[    1.865430] usbcore: registered new interface driver usb-storage
+[    1.978645] usbcore: registered new interface driver usbhid
+[    1.981974] usbhid: USB HID core driver
+[    2.253596] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    2.453943] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+[    2.457608] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.743601] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    2.844069] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    2.847787] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.918231] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-3f980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:09:9b:6a
+[    3.413636] usb 1-1.4: new low-speed USB device number 4 using dwc_otg
+[    3.564342] usb 1-1.4: New USB device found, idVendor=056e, idProduct=0018
+[    3.569203] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.573302] usb 1-1.4: Product: ELECOM USB mouse with wheel 
+[    3.577761] usb 1-1.4: Manufacturer: ELECOM
+[    3.626420] input: ELECOM ELECOM USB mouse with wheel  as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.4/1-1.4:1.0/0003:056E:0018.0001/input/input0
+[    3.637674] hid-generic 0003:056E:0018.0001: input,hidraw0: USB HID v1.10 Mouse [ELECOM ELECOM USB mouse with wheel ] on usb-3f980000.usb-1.4/input0
+[   10.323558] usb 1-1.3: new high-speed USB device number 5 using dwc_otg
+[   10.425227] usb 1-1.3: New USB device found, idVendor=15eb, idProduct=a403
+[   10.425251] usb 1-1.3: New USB device strings: Mfr=2, Product=3, SerialNumber=4
+[   10.425263] usb 1-1.3: Product: AK-020 
+[   10.425274] usb 1-1.3: Manufacturer: AK-020 
+[   10.425284] usb 1-1.3: SerialNumber: 536957700094020
+[   10.426507] usb-storage 1-1.3:1.0: USB Mass Storage device detected
+[   10.428417] scsi host0: usb-storage 1-1.3:1.0
+[   10.602552] usb 1-1.3: USB disconnect, device number 5
+[   11.353577] usb 1-1.3: new high-speed USB device number 6 using dwc_otg
+[   11.454401] usb 1-1.3: New USB device found, idVendor=15eb, idProduct=7d0e
+[   11.454424] usb 1-1.3: New USB device strings: Mfr=9, Product=10, SerialNumber=0
+[   11.454435] usb 1-1.3: Product: AK-020 
+[   11.454446] usb 1-1.3: Manufacturer: AK-020 
+[   11.458581] usb-storage 1-1.3:1.6: USB Mass Storage device detected
+[   11.458930] scsi host1: usb-storage 1-1.3:1.6
+[   11.491689] usbcore: registered new interface driver usbserial
+[   11.491811] usbcore: registered new interface driver usbserial_generic
+[   11.491931] usbserial: USB Serial support registered for generic
+[   11.492956] usbserial_generic 1-1.3:1.0: Generic device with no bulk out, not allowed.
+[   11.493022] usbserial_generic: probe of 1-1.3:1.0 failed with error -5
+[   11.493127] usbserial_generic 1-1.3:1.1: Generic device with no bulk out, not allowed.
+[   11.493168] usbserial_generic: probe of 1-1.3:1.1 failed with error -5
+[   11.493253] usbserial_generic 1-1.3:1.2: The "generic" usb-serial driver is only for testing and one-off prototypes.
+[   11.493275] usbserial_generic 1-1.3:1.2: Tell linux-usb@vger.kernel.org to add your device to a proper driver.
+[   11.493286] usbserial_generic 1-1.3:1.2: generic converter detected
+[   11.494752] usb 1-1.3: generic converter now attached to ttyUSB0
+[   11.496928] usbserial_generic 1-1.3:1.3: The "generic" usb-serial driver is only for testing and one-off prototypes.
+[   11.496956] usbserial_generic 1-1.3:1.3: Tell linux-usb@vger.kernel.org to add your device to a proper driver.
+[   11.496967] usbserial_generic 1-1.3:1.3: generic converter detected
+[   11.497955] usb 1-1.3: generic converter now attached to ttyUSB1
+[   11.498076] usbserial_generic 1-1.3:1.4: The "generic" usb-serial driver is only for testing and one-off prototypes.
+[   11.498090] usbserial_generic 1-1.3:1.4: Tell linux-usb@vger.kernel.org to add your device to a proper driver.
+[   11.498101] usbserial_generic 1-1.3:1.4: generic converter detected
+[   11.499113] usb 1-1.3: generic converter now attached to ttyUSB2
+[   11.499218] usbserial_generic 1-1.3:1.5: The "generic" usb-serial driver is only for testing and one-off prototypes.
+[   11.499231] usbserial_generic 1-1.3:1.5: Tell linux-usb@vger.kernel.org to add your device to a proper driver.
+[   11.499242] usbserial_generic 1-1.3:1.5: generic converter detected
+[   11.500095] usb 1-1.3: generic converter now attached to ttyUSB3
+[   11.563288] usbcore: registered new interface driver cdc_ncm
+[   11.574135] usbcore: registered new interface driver cdc_wdm
+[   11.586369] cdc_mbim 1-1.3:1.0 wwan0: register 'cdc_mbim' at usb-3f980000.usb-1.3, CDC MBIM, d6:aa:e3:d0:05:1f
+[   11.586569] usbcore: registered new interface driver cdc_mbim

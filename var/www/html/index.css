@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+
+*{
+    font-size : 100%;
+    padding   : 0;
+    margin    : 0;
+}
+
+body{
+    font-size : 110%;
+}
+
+header h1{
+    font-size        : 110%;
+    background-color : #ff6600;
+    color            : #ffffff;
+    text-align       : center;
+    margin-bottom    : 20px;
+    padding          : 10px;
+}
+
+section{
+    margin : 10px;
+}
+
+
+section.exp{
+    margin-left : 0px;
+}
+
+section h1{
+    font-size : 100%;
+
+}
+
+section article{
+    margin : 10px 0px 15px 25px;
+}
+
+section article label{
+    margin-right : 20px;
+}
+
+footer{
+    text-align : center;
+}
+
+.rdo{
+    margin-right : 10px;
+}
+
+.txt{
+    font-size        : 130%;
+    width            : 90%;
+    height           : 34px;
+    padding : 0px 10px;
+    background-color : #ffffff;
+    background-image : none;
+    border           : 1px solid #ccc;
+    border-radius    : 5px;
+    box-shadow       : 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.txt:focus {
+    border-color : #66afe9;
+    box-shadow   : 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6);
+    outline      : 0 none;
+}
+.txt_error{
+    background-color : #fff2f2;
+}
+
+.btn{
+    display           : inline-block;
+    width             : 120px;
+    height            : 40px;
+    line-height       : 40px;
+    border-radius     : 10px;
+    background-repeat : repeat-x;
+    color             : #ffffff;
+    font-weight       : 700;
+    margin            : 5px;
+    cursor            : pointer;
+}
+
+#update{
+    border            : 1px solid #0060bf;
+    background-color  : #0080ff;
+    background-image  : linear-gradient(to bottom, #0080ff 0px, #0060bf 100%);
+}
+
+#update:hover{
+    box-shadow       : 0 0 10px rgba(0, 128, 255, 0.8);
+}
+
+#reboot{
+    border            : 1px solid #b92c28;
+    background-color  : #d9534f;
+    background-image: linear-gradient(to bottom, #d9534f 0px, #c12e2a 100%);
+}
+
+#reboot:hover{
+    box-shadow       : 0px 0px 10px rgba(193, 46, 42, 0.8);
+}
+
+#msg_section{
+    display          : none;
+    position         : absolute;
+    top              : 0;
+    right            : 0;
+    bottom           : 0;
+    left             : 0;
+    width            : 80%;
+    height           : 60px;
+    text-align       : center;
+    padding          : 20px;
+    margin           : auto;
+    border           : 1px solid #cccccc;
+    border-radius    : 10px;
+    background-color : #ffffff;
+    box-shadow       : 0 0 10px rgba(0, 0, 0, 0.8);
+}
+.error{
+    color : #ff0000;
+}
+
+
+#wifi_dropdown{
+    display          : inline-block;
+    position         : absolute;
+    margin-left      : -54px;
+    width            : 34px;
+    height           : 34px;
+    line-height      : 34px;
+    text-align       : center;
+    color            : #ffffff;
+    border           : 1px solid #0060bf;
+    border-radius    : 5px;
+    background-color : #0080ff;
+    background-image : linear-gradient(to bottom, #0080ff 0px, #0060bf 100%);
+    cursor           : pointer;
+}
+
+
+#wifi_list{
+    display          : none;
+    position         : absolute;
+    margin           : auto;
+    width            : 85%;
+    height           : 300px;
+    border           : 1px solid #cccccc;
+    background-color : #ffffff;
+    overflow         : scroll;
+}
+
+#wifi_list div{
+    font-size        : 130%;
+    padding       : 10px;
+    border-bottom : 1px solid #cccccc;
+    overflow      : hidden;
+}
+
+#wifi_list div:last{
+    border-bottom : 0px none;
+}
+}

@@ -1,0 +1,40 @@
+[    0.169710] usbcore: registered new interface driver usbfs
+[    0.169844] usbcore: registered new interface driver hub
+[    0.170025] usbcore: registered new device driver usb
+[    1.366294] usbcore: registered new interface driver smsc95xx
+[    1.825345] dwc_otg 3f980000.usb: DWC OTG Controller
+[    1.828687] dwc_otg 3f980000.usb: new USB bus registered, assigned bus number 1
+[    1.832037] dwc_otg 3f980000.usb: irq 62, io mem 0x00000000
+[    1.842224] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002
+[    1.845574] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    1.848844] usb usb1: Product: DWC OTG Controller
+[    1.852087] usb usb1: Manufacturer: Linux 4.4.11-v7+ dwc_otg_hcd
+[    1.855399] usb usb1: SerialNumber: 3f980000.usb
+[    1.867597] usbcore: registered new interface driver usb-storage
+[    1.978517] usbcore: registered new interface driver usbhid
+[    1.981845] usbhid: USB HID core driver
+[    2.243444] usb 1-1: new high-speed USB device number 2 using dwc_otg
+[    2.443835] usb 1-1: New USB device found, idVendor=0424, idProduct=9514
+[    2.447257] usb 1-1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.733450] usb 1-1.1: new high-speed USB device number 3 using dwc_otg
+[    2.833957] usb 1-1.1: New USB device found, idVendor=0424, idProduct=ec00
+[    2.837610] usb 1-1.1: New USB device strings: Mfr=0, Product=0, SerialNumber=0
+[    2.908148] smsc95xx 1-1.1:1.0 eth0: register 'smsc95xx' at usb-3f980000.usb-1.1, smsc95xx USB 2.0 Ethernet, b8:27:eb:09:9b:6a
+[    2.993457] usb 1-1.2: new full-speed USB device number 4 using dwc_otg
+[    3.095750] usb 1-1.2: New USB device found, idVendor=0557, idProduct=2008
+[    3.099604] usb 1-1.2: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.103457] usb 1-1.2: Product: USB-Serial Controller D
+[    3.107261] usb 1-1.2: Manufacturer: Prolific Technology Inc. 
+[    3.403460] usb 1-1.4: new low-speed USB device number 5 using dwc_otg
+[    3.560587] usb 1-1.4: New USB device found, idVendor=056e, idProduct=0018
+[    3.560599] usb 1-1.4: New USB device strings: Mfr=1, Product=2, SerialNumber=0
+[    3.560609] usb 1-1.4: Product: ELECOM USB mouse with wheel 
+[    3.560618] usb 1-1.4: Manufacturer: ELECOM
+[    3.601645] input: ELECOM ELECOM USB mouse with wheel  as /devices/platform/soc/3f980000.usb/usb1/1-1/1-1.4/1-1.4:1.0/0003:056E:0018.0001/input/input0
+[    3.612007] hid-generic 0003:056E:0018.0001: input,hidraw0: USB HID v1.10 Mouse [ELECOM ELECOM USB mouse with wheel ] on usb-3f980000.usb-1.4/input0
+[    6.432109] usbcore: registered new interface driver usbserial
+[    6.432379] usbcore: registered new interface driver usbserial_generic
+[    6.432500] usbserial: USB Serial support registered for generic
+[    6.438301] usbcore: registered new interface driver pl2303
+[    6.438440] usbserial: USB Serial support registered for pl2303
+[    6.447203] usb 1-1.2: pl2303 converter now attached to ttyUSB0
