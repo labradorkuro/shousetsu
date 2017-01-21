@@ -1,2 +1,3 @@
-sensor_no = 0
+sensor_no = 9003
 serial_port = /dev/ttyUSB4
+post_url = https://nagaoka-satellite.com/nspms/ajaxlib.php

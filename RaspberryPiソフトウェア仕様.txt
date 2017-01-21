@@ -47,6 +47,7 @@ recordは[a:12,b:2.3,c:10]
 （６）sensor_config.txtの内容
 sensor_no = 0　:　センサーNo
 serial_port = /dev/ttyUSB4　：USB-RS232C用デバイス指定
+post_url = https://nagaoka-satellite.com/nspms/ajaxlib.php :POST先URL
 
 ・3Gモデムの場合とWiFiドングルの場合でデバイス名が異なる。
 /dev/ttyUSB4は3Gモデム時
