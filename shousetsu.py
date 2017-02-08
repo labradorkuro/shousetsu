@@ -85,9 +85,10 @@ def readData():
     #str = "a:1,b:10,c:20,d:30,e:40,f:50,g:60"
     #str = "a:1,b:10,y:20,z:30"
     print "取得データ: %s " % str + "[len=%d]" % len(str)
-    if len(str) > 0:
-        values = str.split(',')
-    return values
+    #if len(str) > 0:
+    #    values = str.split(',')
+    #return values
+    return str
 
 #
 # 取得データからサーバに送信するデータを抽出する
@@ -123,6 +124,7 @@ def main():
     firstboot = 1
 
     port = serial.Serial(serial_port,
+                      #baudrate=230400,
                       baudrate=9600,
                       #bytesize=serial.SEVENBITS,
                       bytesize=serial.EIGHTBITS,
@@ -134,20 +136,22 @@ def main():
         time.sleep(SLEEPTIME)
         #10秒毎に温度湿度を計測して送信する
         if( g_cmpTime+g_sendInterval < time.time()):
-            values = parseData(readData())  #装置からデータ取得
+            #values = parseData(readData())  #装置からデータ取得
+            values = readData()
             print values
             val_len = len(values)
             if val_len > 0:
                 if url != "":
                     #HTTP送信
-                    if val_len == 1:
-                        a = values[0]
-                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip()})
-                    elif val_len == 3:
-                        a = values[0]
-                        c = values[1]
-                        d = values[2]
-                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip(), c[0].strip():c[1].strip(), d[0].strip():d[1].strip()})
+                    params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, 'record':values})
+#                    if val_len == 1:
+#                        a = values[0]
+#                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip()})
+#                    elif val_len == 3:
+#                        a = values[0]
+#                        c = values[1]
+#                        d = values[2]
+#                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip(), c[0].strip():c[1].strip(), d[0].strip():d[1].strip()})
                     try:
 
                         res = urllib2.urlopen(url, params)
