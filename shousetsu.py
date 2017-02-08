@@ -13,7 +13,7 @@ import threading
 import serial
 import subprocess
 
-VERSION_NO = "1.0a"
+VERSION_NO = "1.0b"
 INTERVAL = 10	#送信インターバル初期値 単位 sec
 SLEEPTIME = 0.1 #永久ループのスリープ時間 単位 sec
 TEST_INT = 1   #(テスト用)インターバルを10:1/10[60s] 20:1/20[30s] 30:1/30[20s] 60:1/60[10s]
@@ -79,12 +79,30 @@ def getDatetime():
 def readData():
     global port
     values = []
-    port.write('req\r')
+    port.write('req\r\n') # 正式には\r\nにする
     str = port.readline()  # 行終端'\n'までリードする
+    # Debug
+    #str = "a:1,b:10,c:20,d:30,e:40,f:50,g:60"
+    #str = "a:1,b:10,y:20,z:30"
     print "取得データ: %s " % str + "[len=%d]" % len(str)
     if len(str) > 0:
         values = str.split(',')
     return values
+
+#
+# 取得データからサーバに送信するデータを抽出する
+#
+def parseData(values):
+    rtn_valuse = []
+    for val in values:
+        v = val.split(':')
+        if v[0].strip() == 'a':
+            rtn_valuse.append(v)
+        if v[0].strip() == 'c':
+            rtn_valuse.append(v)
+        if v[0].strip() == 'd':
+            rtn_valuse.append(v)
+    return rtn_valuse
 
 def main():
 
@@ -116,13 +134,20 @@ def main():
         time.sleep(SLEEPTIME)
         #10秒毎に温度湿度を計測して送信する
         if( g_cmpTime+g_sendInterval < time.time()):
-            values = readData()  #装置からデータ取得
+            values = parseData(readData())  #装置からデータ取得
             print values
-            if len(values) > 0:
+            val_len = len(values)
+            if val_len > 0:
                 if url != "":
                     #HTTP送信
-                    value_1 = values[0].split(':')
-                    params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, value_1[0].strip():value_1[1].strip()})
+                    if val_len == 1:
+                        a = values[0]
+                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip()})
+                    elif val_len == 3:
+                        a = values[0]
+                        c = values[1]
+                        d = values[2]
+                        params = urllib.urlencode({'func':"regRecord", 'sensor_no': sensor_no, a[0].strip():a[1].strip(), c[0].strip():c[1].strip(), d[0].strip():d[1].strip()})
                     try:
 
                         res = urllib2.urlopen(url, params)
